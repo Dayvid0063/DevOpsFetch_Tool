@@ -1,0 +1,14 @@
+[Unit]
+Description=DevOps Fetch Service
+After=network.target
+
+[Service]
+ExecStart=/home/orjidavid/DevOpsFetch_Tool/src/devopsfetch.sh
+Restart=always
+User=root
+Group=root
+RestartSec=10
+StartLimitInterval=0
+
+[Install]
+WantedBy=multi-user.target
